@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name = "Function" parallel="tests" thread-count="5">
+
+<!-- For listeners class -->
+<listeners>
+<listener class-name="Run.Ilistners"></listener>
+</listeners>
+
+<test name="Adhoc">
+
+<!-- For parameterized -->
+<parameter name="browser" value="Chrome"></parameter>
+<parameter name="URI" value="https://www.facebook.com"></parameter>
+
+<!-- For grouping test 
+<groups>
+<run>
+     <include name="Smoke"></include>
+	 <exclude name="Regression"></exclude>
+	 <exclude name="Adhoc"></exclude>
+</run>
+</groups>
+-->
+
+<classes>
+
+<class name="Run.TestNGwithCode1"></class>
+<class name="Run.TestNGwithCode"></class>
+<class name="Run.Provider"></class>
+<class name="Run.Shots"></class>
+<!--<class name="Run.Groups"></class>-->
+</classes>
+</test>
+
+
+<!--Command out in xml-->
+<!-- At a time 2 browser open -->
+<!--  
+<test name="Different">
+<parameter name="browser" value="firefox"></parameter>
+<parameter name="URI" value="https://www.facebook.com"></parameter>
+<classes>
+<class name="Run.TestNGwithCode1"></class>
+<class name="Run.TestNGwithCode"></class>
+<class name="Run.Provider"></class>
+</classes>
+</test>
+-->
+
+</suite>

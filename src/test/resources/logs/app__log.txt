@@ -1,0 +1,1 @@
+INFO    2020-12-01 19:42:11,491 [main] PIIT.SeleniumS.Logges  - This is our first logs for use
